@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="container">
+        <form action="">
+          <label for="fname">Name:</label>
+          <input type="text" id="fname" name="name">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message"></textarea>
+          <button type="button" onclick="createUser()">submit</button>
+          <button type="button" onclick="add()">Add</button>
+          
+        </form>
+        <div class="table1">
+        <table>
+            <thead>
+           <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Edit</th>
+                <th>Delete</th>
+           </tr>
+        </thead>
+            <tbody>
+            </tbody>
+       </table>
+        </div>
+
+    </div>
+   
+    <script src="./script.js"></script>
+</body>
+</html>

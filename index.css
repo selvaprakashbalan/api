@@ -1,0 +1,11 @@
+form{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.table1{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
