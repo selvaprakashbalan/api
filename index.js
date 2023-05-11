@@ -53,7 +53,7 @@ app.post("/insert", (req, res) => {
 // get all
 app.get("/getAll", (req, res) => {
     console.log('----------get all-------------')
-    connection.query("select id,name,email,message from testdetails",function (error, results) {
+    connection.query("select id,name,email,message from testdetails where is_active=?",[1],function (error, results) {
         if (error) {
           console.log(error);
         }
@@ -77,7 +77,7 @@ app.get("/:name", (req, res) => {
       }
     );
   });
-  
+  // *****Update*****
   app.put('/put',(req,res)=>{
     connection.query("update testdetails set name=?,email=?,message=?  where id=?",[req.body.name,req.body.email,req.body.message,req.body.id] ,function(error,results){
     if(error){
@@ -86,6 +86,18 @@ app.get("/:name", (req, res) => {
    res.json(results)
    });
    }) 
+// app.listen(4000, () => {
+//   console.log("listening on port 4000");
+// });
+// *****delete*****
+app.put('/delete',(req,res)=>{
+  connection.query("update testdetails set is_active=? where id=?",[req.body.is_active,req.body.id] ,function(error,results){
+  if(error){
+  console.log(error);
+ }
+ res.json(results)
+ });
+ }) 
 app.listen(4000, () => {
-  console.log("listening on port 4000");
+console.log("listening on port 4000");
 });
