@@ -1,4 +1,4 @@
-var passvalue='';
+// var passvalue='';
 // *****Insert the data to mysql*****
 function createUser() {
   console.log("click");
@@ -29,8 +29,7 @@ html += `<tr>
 <td>${e.name}</td>
 <td>${e.email}</td>
 <td>${e.message}</td>
-<td><button type="button" onclick="edit('${e.id}','${e.name}','${e.email}','${e.message}')">Edit</button></td>
-<td><button type="button"  onclick="deleteuser(${e.id},${e.is_active})">Delete</button></td>
+<td><button type="button" onclick="edit('${e.id}','${e.name}','${e.email}','${e.message}')">Edit</button><button type="button"  onclick="deleteuser(${e.id},${e.is_active})">Delete</button></td>
 </tr>`
 })
 document.getElementsByTagName("tbody")[0].innerHTML = html

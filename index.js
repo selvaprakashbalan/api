@@ -52,7 +52,7 @@ app.post("/insert", (req, res) => {
 });
 // get all
 app.get("/getAll", (req, res) => {
-    console.log('----------get all-------------')
+    console.log('----------get al-------------')
     connection.query("select id,name,email,message from testdetails where is_active=?",[1],function (error, results) {
         if (error) {
           console.log(error);
